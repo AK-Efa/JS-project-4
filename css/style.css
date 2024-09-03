@@ -1,0 +1,139 @@
+/** COMMON CSS STARTS HERE */
+:root {
+    --navColor: white;
+    --bodyColor: rgb(252, 246, 247);
+    --textColor: #242424;
+  }
+  
+  .darkmode {
+    --navColor: #fcf4f4;
+    --bodyColor: rgb(150, 148, 148);
+    --textColor: rgb(4, 104, 4);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  ul,
+  ol {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  p,
+  span,
+  ol {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: "arial";
+    background-color: var(--bodyColor);
+    transition: 0.3s;
+  }
+  
+  nav {
+    background-color: var(--navColor);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 15px 0;
+  }
+  nav a {
+    color: var(--textColor);
+    margin: 0 15px;
+  }
+  
+  nav .darkBtn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    overflow: hidden;
+  }
+  
+  nav .darkBtn span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 20px;
+  }
+  
+  nav .sunIcon {
+    background-color: rgb(255, 215, 17);
+    transition: 0.35s ease-in;
+  }
+  
+  .darkmode nav .sunIcon{
+      margin-top: -100%;
+  
+  }
+  
+  nav .moonIcon {
+    background-color: rgb(8, 9, 27);
+    color: white;
+  }
+  nav .logo-lite {
+    display: none;
+  }
+  
+  .darkmode nav .logo-lite {
+    display: block;
+  }
+  .darkmode nav .logo-original {
+    display: none;
+  }
+  
+  
+  h1 {
+    color: var(--textColor);
+  }
+  
+  section{
+      height: 100vh;
+  }
+  .faq{
+      border: 1px solid #aaa;
+      margin-bottom: 20px;
+  }
+  .faqHeader{
+      border-bottom: 1px solid #aaa;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      cursor: pointer;
+  }
+  .faqHeader h5{
+      font-weight: 600;
+  }
+  
+  .faqBody{
+      max-height: 0px;
+      overflow: hidden;
+      transition: 0.5s ease-in;
+  }
+  .faq .faqHeader span{
+      transition: 0.3s ease;
+  }
+  .faq.active .faqHeader span{
+      transform: rotate(-180deg);
+  }
+  
+  .faq.active .faqBody{
+      max-height: 100vh;
+      overflow: auto;
+  }
+  
+  
+  .faqContent{
+      padding: 15px;
+  }
+  
